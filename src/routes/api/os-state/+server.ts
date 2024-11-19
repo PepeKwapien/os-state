@@ -9,8 +9,8 @@ export async function GET() {
     const hostname = os.hostname();
     const totalMemory = os.totalmem();
     const freeMemory = os.freemem();
-
     const platform = os.platform();
+    const architecture = os.arch();
     const osVersion = os.version();
     const cpus = os.cpus();
     const cpusUsage = cpus.map((cpu) => {
@@ -36,7 +36,9 @@ export async function GET() {
 
     return json({
         hostname,
+        platform,
         osVersion,
+        architecture,
         temperature,
         totalMemory,
         freeMemory,

@@ -1,6 +1,8 @@
 export interface OsState {
     hostname: string;
+    platform: string;
     osVersion: string;
+    architecture: string;
     temperature: string;
     totalMemory: number;
     freeMemory: number;
