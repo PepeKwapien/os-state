@@ -40,7 +40,7 @@
     <Breaker title="CPU"></Breaker>
     {#each osState.cpusUsage as cpu, index}
       <div class="cpu-spec">
-        <p>CPU {index + 1}:</p>
+        <p>Core {index + 1}:</p>
         <ProgressBar max={100} value={cpu} unit=""></ProgressBar>
       </div>
     {/each}
